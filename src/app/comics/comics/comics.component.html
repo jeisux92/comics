@@ -1,0 +1,12 @@
+<h1>Comics</h1>
+<h5>
+  Busca el comic que desees revisar y haz click para ver mas información
+</h5>
+<div class="card" style="width: 18rem;" *ngFor="let comic of comics">
+  <img class="card-img-top" [src]="comic.url" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title" [textContent]="comic.title"></h5>
+    <p class="card-text" [textContent]="comic.summary"></p>
+    <a [href]="'#'+comic.id" class="btn btn-primary">Ver más</a>
+  </div>
+</div>
